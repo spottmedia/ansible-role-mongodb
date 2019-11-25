@@ -10,8 +10,7 @@
 
 - name: Ubuntu | Add keys authenticity
   apt_key:
-    keyserver: "{{ url_apt_key }}"
-    id: "{{ id_apt_key }}"
+    url: "{{ url_apt_key }}"
   when: ansible_distribution == 'Ubuntu'
 
 - name: Debian | Add source sources
